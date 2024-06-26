@@ -1,3 +1,3 @@
 # HCOE_MERN
-Trainig class for MERN stack
+Training class for MERN stack
 HELLO JS WORLD, MANOJ

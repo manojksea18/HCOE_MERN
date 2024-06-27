@@ -99,8 +99,20 @@ console.log(person);
 // }
 
 //multiplication table of 12.
-let number = 12;
-do {
-  console.log(number);
-  number += 12;
-} while (number <= 120);
+// let number = 12;
+// do {
+//   console.log(number);
+//   number += 12;
+// } while (number <= 120);
+
+// // output : "Manoj Khati" // proper case
+// const fname = "manoj";
+// const lname = "khati";
+
+function formatNumber(number) {
+  return number.toLocaleString();
+}
+const number = 10000;
+
+const formattednum = formatNumber(number);
+console.log(formattednum); //OUTPUT 10,000

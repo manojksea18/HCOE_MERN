@@ -88,15 +88,15 @@ console.log(person);
 //alert welcome 'Your name'
 //alter invlaid credentials.
 
-const name = prompt("please enter your name");
-const username = prompt("please enter your username");
-const password = prompt("please enter your password");
+// const name = prompt("please enter your name");
+// const username = prompt("please enter your username");
+// const password = prompt("please enter your password");
 
-if (username === "name" && password === "name") {
-  alert("welcome!" + " " + name);
-} else {
-  alert("invalid credential:");
-}
+// if (username === "name" && password === "name") {
+//   alert("welcome!" + " " + name);
+// } else {
+//   alert("invalid credential:");
+// }
 
 //multiplication table of 12.
 let number = 12;

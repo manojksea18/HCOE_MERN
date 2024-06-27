@@ -37,7 +37,7 @@ console.log(person);
 
 //statements
 //write a js program that asks user for their gender (m/f).
-let gender = prompt("which gender are you male or female");
+// let gender = prompt("which gender are you male or female");
 
 // // if(gender==="male"){
 // //     alert('you are'+ gender);
@@ -54,31 +54,53 @@ let gender = prompt("which gender are you male or female");
 //   : gender === "female"
 //   ? alert("you are female")
 //   : alert("you are others");
-switch (gender) {
-  case "m":
-    alter("you are male");
-    break;
-  case "f":
-    alert("you are female");
-    break;
-  case "o":
-    alert("you are others");
-    break;
-  default:
-    alert("invalid Gender");
+// switch (gender) {
+//   case "m":
+//     alter("you are male");
+//     break;
+//   case "f":
+//     alert("you are female");
+//     break;
+//   case "o":
+//     alert("you are others");
+//     break;
+//   default:m
+//     alert("invalid Gender");
+// }
+// alert("you are " + " " + gender);
+// //write a js program to calculate the grade
+// // >80 A
+// //60-80 B
+// const marks = prompt("enter your marks:");
+// switch (true) {
+//   case marks > 80:
+//     alert("A");
+//     break;
+//   case marks >= 60 && marks <= 80:
+//     alert("B");
+//   default:
+//     alert("invalid grade");
+// }
+// alert("you are " + " " + grade);
+
+// write a js program to ask for usename and password
+// if username matches ur name and password matches your name
+//alert welcome 'Your name'
+//alter invlaid credentials.
+
+const name = prompt("please enter your name");
+const username = prompt("please enter your username");
+const password = prompt("please enter your password");
+
+if (username === "name" && password === "name") {
+  alert("welcome!" + " " + name);
+} else {
+  alert("invalid credential:");
 }
-alert("you are " + " " + gender);
-//write a js program to calculate the grade
-// >80 A
-//60-80 B
-const marks = prompt("enter your marks:");
-switch (true) {
-  case marks > 80:
-    alert("A");
-    break;
-  case marks >= 60 && marks <= 80:
-    alert("B");
-  default:
-    alert("invalid grade");
-}
-alert("you are " + " " + grade);
+
+//multiplication table of 12.
+let number = 12;
+do {
+  console.log(number);
+  number += 12;
+} while (number <= 120);

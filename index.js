@@ -106,13 +106,12 @@ console.log(person);
 // } while (number <= 120);
 
 // // output : "Manoj Khati" // proper case
-// const fname = "manoj";
-// const lname = "khati";
+const fname = "manoj";
+const lname = "khati";
+console.log(fname.charAt(0).toUpperCase() + fname.slice(1));
+console.log(lname.charAt(0).toUpperCase() + lname.slice(1));
 
-function formatNumber(number) {
-  return number.toLocaleString();
-}
 const number = 10000;
 
-const formattednum = formatNumber(number);
+const formattednum = number.toLocaleString();
 console.log(formattednum); //OUTPUT 10,000

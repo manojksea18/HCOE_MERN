@@ -147,4 +147,49 @@ const pagging = (num = 5) => {
 pagging(1); //1
 pagging(); // undefined and now 5 after num=5
 
-//clousure
+//4 IIFE
+(() => {
+  console.log("hello");
+})();
+
+//explicit func
+
+const suum = (a, b) => {
+  return a + b;
+};
+const r = suum(12, 12);
+console.log(r);
+
+//implicit func
+const sam = (a, b) => a + b;
+console.log(sam);
+
+//write js func that reverse a num. ex= 32243 output=34223
+const reverseString = (num) => {
+  let numstr = num.toString();
+  let stringStr = numstr.split("").reverse().join("");
+  console.log(Number(stringStr));
+};
+reverseString(32243);
+// console.log(res);
+
+//implicit method
+const reverser = (num) => Number(num.toString().split("").reverse().join(""));
+const ans = reverser(32243);
+console.log(ans);
+
+//wa js p to convert temperature to and from celsius , fahrenheit.
+
+//[formula: c/5 = {f-32}/9 [where c = temperature in celsius and f= temperature in fahrenheit ]]
+
+const tempConv = (temp, deg = "c") => {
+  console.log(temp, deg);
+  if (deg === "c") {
+    return ((temp - 32) * 5) / 9;
+  } else {
+    return (temp / 5) * 9 + 32;
+  }
+};
+
+const resp = tempConv(60, "f");
+console.log(resp);

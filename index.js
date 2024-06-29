@@ -108,10 +108,43 @@ console.log(person);
 // // output : "Manoj Khati" // proper case
 const fname = "manoj";
 const lname = "khati";
-console.log(fname.charAt(0).toUpperCase() + fname.slice(1));
-console.log(lname.charAt(0).toUpperCase() + lname.slice(1));
+console.log(
+  fname.charAt(0).toUpperCase() +
+    fname.slice(1) +
+    " " +
+    lname.charAt(0).toUpperCase() +
+    lname.slice(1)
+);
 
-const number = 10000;
+const number = 1000000;
 
 const formattednum = number.toLocaleString();
 console.log(formattednum); //OUTPUT 10,000
+
+//function
+//fn declare
+const sum = (a, b) => {
+  return a + b;
+};
+//fun execution
+const result = sum(110, 200);
+console.log(result);
+
+/*
+1.default function
+2.parameterized func
+3.closure
+4.IIFE
+5.explict function
+6.implicit func
+7.Anonymous func
+8.Inline func
+*/
+//1.default dunc
+const pagging = (num = 5) => {
+  console.log(num);
+};
+pagging(1); //1
+pagging(); // undefined and now 5 after num=5
+
+//clousure

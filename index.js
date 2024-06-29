@@ -193,3 +193,47 @@ const tempConv = (temp, deg = "c") => {
 
 const resp = tempConv(60, "f");
 console.log(resp);
+
+//object
+// CRUD ( Create, Read ,Update , Detele)
+
+const mobile = {};
+console.log(typeof mobile);
+
+const laptop = {
+  model: "hp",
+  name: "victus",
+  isWorking: true,
+  modelYear: 2002,
+  age: () => {
+    return 2024 - modelYear;
+  },
+  fullName: function () {
+    return model + name;
+  },
+};
+
+//Read( use . to access the property)
+const laptopModel = laptop.model;
+const laptopAge = laptop.age();
+const laptopFullaName = laptop.fullName();
+console.log(laptopModel, laptopAge);
+
+//update
+laptop.model = "Ball";
+console.log(laptop);
+
+//Delete
+
+//
+const item = {
+  name: "headphones",
+  price: 77.84,
+  discount: "7%",
+};
+const price = item.price;
+if (price > 100) {
+  item.price *= 1 - 0.1;
+} else {
+  item.price *= 1 - 0.07;
+}

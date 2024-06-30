@@ -147,7 +147,7 @@ const pagging = (num = 5) => {
 pagging(1); //1
 pagging(); // undefined and now 5 after num=5
 
-//4 IIFE
+//4 IIFE((Immediately Invoked Function Expression))
 (() => {
   console.log("hello");
 })();
@@ -178,62 +178,251 @@ const reverser = (num) => Number(num.toString().split("").reverse().join(""));
 const ans = reverser(32243);
 console.log(ans);
 
+// arrow function
+// 2. Write a JavaScript function that checks whether a passed string is a palindrome or not?
+// A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
+const palindrome = (str) => {
+  let string = str.split("").reverse().join("");
+  console.log(string);
+};
+
+palindrome("madam");
+
+//implict func
+const invfunc = (num) => num.toString().split("").reverse().join("");
+invfunc(22334);
+
+//3. Write a JavaScript function that generates all combinations of a string.
+// Example string : 'dog'
+// Expected Output : d,do,dog,o,og,g
+
 //wa js p to convert temperature to and from celsius , fahrenheit.
 
 //[formula: c/5 = {f-32}/9 [where c = temperature in celsius and f= temperature in fahrenheit ]]
 
-const tempConv = (temp, deg = "c") => {
-  console.log(temp, deg);
-  if (deg === "c") {
-    return ((temp - 32) * 5) / 9;
-  } else {
-    return (temp / 5) * 9 + 32;
-  }
+const arrow = (num) => {
+  console.log(num);
 };
+arrow(12);
 
-const resp = tempConv(60, "f");
-console.log(resp);
+//wap in js using fntion to convert  temp to  and from celsius farenheit
+
+// // Function to convert Celsius to Fahrenheit
+// function celsiusToFahrenheit(celsius) {
+//   var fahrenheit = (celsius * 9) / 5 + 32;
+//   return fahrenheit;
+// }
+
+// var celsiusTemp = prompt("Enter temperature in Celsius:", 0);
+// var fahrenheitTemp = celsiusToFahrenheit(parseFloat(celsiusTemp));
+
+// alert("The temperature in Fahrenheit is " + fahrenheitTemp);
+
+// const tempc = (temp, degree = "c") => {
+//   console.log(temp, degree);
+//   if (degree === "c") {
+//     return (f = (c * 9) / 5 + 32);
+//   } else {
+//     return ((temp - 32) * 5) / 9;
+//   }
+// };
+// const resp = tempc(140, "f");
+// console.log(resp);
 
 //object
-// CRUD ( Create, Read ,Update , Detele)
+//CRUDE
 
-const mobile = {};
-console.log(typeof mobile);
+//create obbject
+// const laptop = {
+//   model: "hp",
+//   name: "hp victus", //key:value
+//   isworkking: true,
+//   modelYear: 2020,
+//   specs: {
+//     ram: 16,
+//     sdd: "1TB",
+//   },
+//   age: () => {
+//     return 2024 - laptop.modelYear;
+//   },
+//   fullName: () => {
+//     console.log(this);
+//     return this.model + laptop.name;
+//   },
+// }; //object  curly bracket thapesi es6
+// //read
+// const laptopmodel = laptop.model;
+// const laptopage = laptop.age();
+// const laptopnamee = laptop.fullName();
 
-const laptop = {
-  model: "hp",
-  name: "victus",
-  isWorking: true,
-  modelYear: 2002,
-  age: () => {
-    return 2024 - modelYear;
-  },
-  fullName: function () {
-    return model + name;
-  },
-};
+// console.log(laptopmodel, laptopage, laptopnamee);
 
-//Read( use . to access the property)
-const laptopModel = laptop.model;
-const laptopAge = laptop.age();
-const laptopFullaName = laptop.fullName();
-console.log(laptopModel, laptopAge);
-
+//objet creation type es5?
 //update
-laptop.model = "Ball";
-console.log(laptop);
+// laptop.model = "Ball";
+// console.log(model);
+//delete use nagarni
 
-//Delete
+//destructure
+// const laptop = {
+//   model: "Acer",
+//   name: "Nitro 5", //key:value
+//   modelYear: 2020,
 
-//
-const item = {
-  name: "headphones",
-  price: 77.84,
-  discount: "7%",
+//   age: () => {
+//     return 2024 - laptop.modelYear;
+//   },
+//   fullName: () => {
+//     console.log(this);
+//     return this.model + laptop.name;
+//   },
+// };
+// //spread operator
+// const { model, fullname, ...rest } = laptop;
+// console.log(rest);
+
+// const item = {
+//   name: "headphones",
+//   price: 77.84,
+//   discount: "7%",
+// };
+
+// const price = item.price;
+
+// if (price > 100) {
+//   item.price *= 1 - 0.1;
+// } else {
+//   item.price *= 1 - 0.07;
+// }
+
+// console.log(item.price);
+// //update the obj with new property -discount 7 or 10 % and new price
+// // function updateItem(item) {
+// //   const newPrice = calculateNewPrice(item.price);
+// //   const newDiscount = newPrice > 100 ? "10%" : "7%";
+
+// //   return {
+// //     ...item,
+// //     price: newPrice,
+// //     discount: newDiscount,
+// //   };
+// // }
+
+// // const updatedItem = updateItem(item);
+// // console.log(updatedItem);
+
+// const getnewproduct = (product) => {
+//   const { price, discount, ...rest } = product;
+//   const discountamt = price > 100 ? 0.1 * price : 0.07 * price;
+//   rest.price = price - discountamt;
+//   rest.discount = price > 100 ? "10%" : "7%";
+//   return rest;
+// };
+// const newprod = getnewproduct(product);
+// console.log(newprod);
+//array
+//crud
+const classes = [];
+//update
+classes[0] = "Ma";
+classes[1] = "noj";
+classes[1] = "manoj";
+
+console.log(classes);
+console.log(classes[1]);
+//delete
+// delete classes[0];
+//array method
+console.log(classes.shift());
+//method
+classes.shift();
+console.log(classes);
+// const tempConv = (temp, deg = "c") => {
+//   console.log(temp, deg);
+//   if (deg === "c") {
+//     return ((temp - 32) * 5) / 9;
+//   } else {
+//     return (temp / 5) * 9 + 32;
+//   }
+// };
+
+// const resp = tempConv(60, "f");
+// console.log(resp);
+
+// //object
+// // CRUD ( Create, Read ,Update , Detele)
+
+// const mobile = {};
+// console.log(typeof mobile);
+
+// const laptop = {
+//   model: "hp",
+//   name: "victus",
+//   isWorking: true,
+//   modelYear: 2002,
+//   age: () => {
+//     return 2024 - modelYear;
+//   },
+//   fullName: function () {
+//     return model + name;
+//   },
+// };
+
+// //Read( use . to access the property)
+// const laptopModel = laptop.model;
+// const laptopAge = laptop.age();
+// const laptopFullaName = laptop.fullName();
+// console.log(laptopModel, laptopAge);
+
+// //update
+// laptop.model = "Ball";
+// console.log(laptop);
+
+// //Delete
+
+// //
+// const item = {
+//   name: "headphones",
+//   price: 77.84,
+//   discount: "7%",
+// };
+// const price = item.price;
+// if (price > 100) {
+//   item.price *= 1 - 0.1;
+// } else {
+//   item.price *= 1 - 0.07;
+// }
+
+// let foodA=["Noodle","pasta","Ice-cream"];
+// let foodB=["Fries", "Ice-cream", "Pizza"];
+
+// let common
+
+// sorting
+// const classses = [
+//   { name: "ram", age: 20 },
+//   { name: "sita", age: 15 },
+//   { name: "shyam", age: 40 },
+// ];
+// //sort by value
+// const ageSorter = (arr) => {
+//   return arr.sort((a, b) => a.age - b.age);
+// };
+// const results = ageSorter(classes);
+// console.log(results);
+
+// find the largest country by length
+const countires = ["Nepal", "USA", "Australia"];
+const lagrestCounty = (arr) => {
+  return arr.sort((a, b) => a.length - b.length);
 };
-const price = item.price;
-if (price > 100) {
-  item.price *= 1 - 0.1;
-} else {
-  item.price *= 1 - 0.07;
-}
+const sorted = lagrestCounty(countires);
+const largest = sorted[sorted.length - 1];
+console.log(sorted);
+console.log(largest);
+
+// sir ko soln
+
+//Compare two roles and return boolen if role matches
+const sysRole = ["admin", "manager"];
+const userRole = ["user", "receptionist", "manager"];

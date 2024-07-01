@@ -178,9 +178,10 @@ const reverser = (num) => Number(num.toString().split("").reverse().join(""));
 const ans = reverser(32243);
 console.log(ans);
 
-// arrow function
-// 2. Write a JavaScript function that checks whether a passed string is a palindrome or not?
-// A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
+/* arrow function
+ 2. Write a JavaScript function that checks whether a passed string is a palindrome or not?
+A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
+*/
 const palindrome = (str) => {
   let string = str.split("").reverse().join("");
   console.log(string);
@@ -192,10 +193,10 @@ palindrome("madam");
 const invfunc = (num) => num.toString().split("").reverse().join("");
 invfunc(22334);
 
-//3. Write a JavaScript function that generates all combinations of a string.
-// Example string : 'dog'
-// Expected Output : d,do,dog,o,og,g
-
+/*3. Write a JavaScript function that generates all combinations of a string.
+ Example string : 'dog'
+ Expected Output : d,do,dog,o,og,g
+*/
 const combinationStr = (str) => {
   const combinations = [];
   for (let i = 0; i < str.length; i++) {
@@ -208,6 +209,67 @@ const combinationStr = (str) => {
 const resu = combinationStr("Dog");
 console.log(resu);
 
+/* 4. Write a JavaScript function that returns a string that has letters in alphabetical order.
+Example string : 'webmaster'
+ Expected Output : 'abeemrstw'
+*/
+const alphabet_order = (str) => {
+  return str.split("").sort().join("");
+};
+console.log(alphabet_order("webmaster"));
+
+/*
+5. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word into upper case.
+Example string : 'the quick brown fox'
+Expected Output : 'The Quick Brown Fox '
+*/
+
+const Uppercase = (str) => {
+  console.log(
+    str.charAt(0).toUpperCase() +
+      str.slice(1, 3) +
+      " " +
+      str.charAt(4).toUpperCase() +
+      str.slice(5, 9) +
+      " " +
+      str.charAt(10).toUpperCase() +
+      str.slice(11, 15) +
+      " " +
+      str.charAt(16).toUpperCase() +
+      str.slice(17, 19)
+  );
+};
+console.log(Uppercase("the quick brown fox"));
+
+/*
+6. Write a JavaScript function that accepts a string as a parameter and finds the longest word within the string.
+Example string : 'Web Development Tutorial'
+Expected Output : 'Development'
+*/
+
+const longestWord = (str) => {
+  const longest = str.split(" ");
+  const sortedWord = longest.sort((a, b) => a.length - b.length);
+  return sortedWord[2];
+};
+console.log(longestWord("Web Development Tutorial"));
+
+//or we can do this
+
+const longestWordd = (str) => {
+  const longest = str.split(" ");
+  const sortedWord = longest.sort((a, b) => b.length - a.length);
+  return sortedWord[0];
+};
+console.log(longestWordd("Web Development Tutorial"));
+
+/*
+7. Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
+Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do not count 'y' as vowel here.
+Example string : 'The quick brown fox'
+Expected Output : 5
+*/
+const vowelLetter = (str) => {};
 //wa js p to convert temperature to and from celsius , fahrenheit.
 
 //[formula: c/5 = {f-32}/9 [where c = temperature in celsius and f= temperature in fahrenheit ]]
@@ -433,7 +495,17 @@ const largest = sorted[sorted.length - 1];
 console.log(sorted);
 console.log(largest);
 
+//use array method to find pne common array
+let food1 = ["Noodle", "Pasta", "Ice-cream"];
+let food2 = ["Fries", "Ice-cream", "Pizza"];
+let commonFood = food1.filter((item) => food2.includes(item));
+console.log(commonFood);
+
 // sir ko soln
+const commFood = (food1, food2) => {
+  return food1.filter((item) => food2.includes(item));
+};
+console.log(commFood(food1, food2));
 
 //Compare two roles and return boolen if role matches
 const sysRole = ["admin", "manager"];

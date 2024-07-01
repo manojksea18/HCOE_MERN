@@ -196,6 +196,18 @@ invfunc(22334);
 // Example string : 'dog'
 // Expected Output : d,do,dog,o,og,g
 
+const combinationStr = (str) => {
+  const combinations = [];
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j < str.length + 1; j++) {
+      combinations.push(str.slice(i, j));
+    }
+  }
+  return combinations;
+};
+const resu = combinationStr("Dog");
+console.log(resu);
+
 //wa js p to convert temperature to and from celsius , fahrenheit.
 
 //[formula: c/5 = {f-32}/9 [where c = temperature in celsius and f= temperature in fahrenheit ]]
@@ -426,3 +438,47 @@ console.log(largest);
 //Compare two roles and return boolen if role matches
 const sysRole = ["admin", "manager"];
 const userRole = ["user", "receptionist", "manager"];
+
+const rolematch = (sysRole, userRole) => {
+  return sysRole.some((role) => userRole.includes(role));
+};
+console.log(rolematch(sysRole, userRole));
+
+// get the total number of character bye eye color
+//{hint. a map of eye color to count}
+//result {blue:2, brown:1, yellow:1}
+//.reduce()
+//Report (graph chart)
+
+const characters = [
+  {
+    name: "Luke Skywalker",
+    height: "172",
+    mass: "77",
+    eye_color: "blue",
+    gender: "male",
+  },
+  {
+    name: "Darth Vader",
+    height: "202",
+    mass: "136",
+    eye_color: "yellow",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: "150",
+    mass: "49",
+    eye_color: "brown",
+    gender: "female",
+  },
+  {
+    name: "Anakin Skywalker",
+    height: "188",
+    mass: "84",
+    eye_color: "blue",
+    gender: "male",
+  },
+];
+
+// const totalMass=characters.reduce((acc,characters)=>)
